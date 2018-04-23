@@ -25,3 +25,4 @@ out
 *.class
 .idea
 target/frege/*.java
+/.metadata/
