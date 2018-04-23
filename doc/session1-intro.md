@@ -3,7 +3,7 @@ Session 1 - Introduction
 
 # Introduction
 
-* Frege who...?
+* Frege who...? => philo studies samples
 * Programming paradigms
 * Functional concepts
 * Why functional?
@@ -41,6 +41,12 @@ Session 1 - Introduction
     	* select Java Application
     	* the Main class has to be the same name as the module name defined in the frege file, which is in our case: `HelloFrege`
     * hit run and you should see the text in the console, bravo!
+
+## Tools
+
+
+* Maven and Gradle support
+	* Last commit for Gradle plugin 2016 :( https://github.com/Frege/frege-gradle-plugin
 
 # First Steps
 
