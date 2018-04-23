@@ -21,6 +21,7 @@ Session 1 - Introduction
 	```
 	* use UTF-8 encoding
 	* use spaces instead of tabs
+	* add "CMD+R" run shortcut ;)
 * install the eclipse plugin
 	* basically just an update site pointing to:  http://www.frege-lang.org/fregide/
 	* or follow the complete tutorial: https://github.com/Frege/eclipse-plugin
