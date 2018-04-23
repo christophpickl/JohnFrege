@@ -1,0 +1,4 @@
+module HelloFrege where
+
+main _ = do
+    println "Hello Frege"

@@ -2,14 +2,11 @@
 
 This is a repo containing a small workshop to work with Frege, a Haskell implementation for the JVM.
 
-https://github.com/Frege/frege
+See: https://github.com/Frege/frege
 
 
 # Misc
 
-* use eclipse plugin (better plugin support so far)
-	* from here: https://github.com/Frege/eclipse-plugin
-	* or use good old intellij https://github.com/Frege/frege/wiki/Using-Frege-in-Intellij-IDEA
 * documentation:
 	* MUST:
 		* Nice tutorial: https://dierk.gitbooks.io/fregegoodness/
