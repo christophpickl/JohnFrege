@@ -6,6 +6,7 @@ Session 2 - Basics
 	* some basic functionals (map, filter, zip, reduce)
 	* bigger samples like graph algorithms
 * present theory of data structures (node, edge sample), algebraic
+* glossary ausarbeiten (first class, higher order, curry, ...)
 
 # Leftovers
 
