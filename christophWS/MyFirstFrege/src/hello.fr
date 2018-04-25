@@ -1,9 +1,4 @@
 module HelloFrege where
 
 main _ = do
-    println "Hello Frege"
-    println (foo 3)
-
-foo :: Int -> Int
-foo x =
-	x * 2
+    println "Hello John"
