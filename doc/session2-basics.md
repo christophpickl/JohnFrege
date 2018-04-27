@@ -2,11 +2,35 @@ Session 2 - Basics
 ---
 
 # TODO
+
+## outline for session 2:
+
+* finish my intro (lists) + data types
+* get started: setup fregide ad john
+* go through slides from funkprog
+* prepare some samples to work out with john (implement in kotlin + haskell)
+* => show that i've reported the bug and it got fixed! i'm sooo nice :)
+https://github.com/Frege/eclipse-plugin/issues/32
+
+## ideas
 * workout samples in Kotlin VS Haskell
 	* some basic functionals (map, filter, zip, reduce)
 	* bigger samples like graph algorithms
 * present theory of data structures (node, edge sample), algebraic
 * glossary ausarbeiten (first class, higher order, curry, ...)
+* https://www.youtube.com/watch?v=02_H3LjqMr8
+
+	someFun param
+		| (param >= 5) && (param < 10) = "asdf"
+
+## foobar
+
+* idiomatic programming with lisp
+* ! wikipedia artikel lesen (funkprog allg., haskell)
+* ! slides durchlesen
+* generics
+* "incomplete functions"
+* curry/decurry
 
 # Leftovers
 
