@@ -40,7 +40,7 @@ https://github.com/Frege/eclipse-plugin/issues/32
 
 ```haskell
 -- simple declaration:
-[ 1, 2, 3]
+[ 1, 2, 3 ]
 ```
 
 ### List comprehension

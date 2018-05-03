@@ -12,6 +12,7 @@ Must read:
 
 * Nice tutorial: https://dierk.gitbooks.io/fregegoodness/
 * API documentation: http://www.frege-lang.org/doc/fregedoc.html
+* University course: http://www.complang.tuwien.ac.at/knoop/fp185A03_ws1718
 
 Optional:
 
