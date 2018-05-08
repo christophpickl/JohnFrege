@@ -20,3 +20,9 @@ Optional:
 * https://wiki.haskell.org/
 * Why functional langs paper: https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf
 * for Mac only: use Dash with haskell ;)
+* Beginner's Haskell: https://www.haskell.org/documentation
+
+# Tools
+
+* FregIDE for eclipse (IntelliJ plugin s*cks)
+* Haskell native on macos: `brew cask install haskell-platform`
