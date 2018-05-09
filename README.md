@@ -16,8 +16,9 @@ Must read:
 
 Optional:
 
+* Hoogle: https://www.haskell.org/hoogle/
 * Haskell tutorial: http://haskellbook.com/
-* https://wiki.haskell.org/
+* Haskell wiki: https://wiki.haskell.org/
 * Why functional langs paper: https://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf
 * for Mac only: use Dash with haskell ;)
 * Beginner's Haskell: https://www.haskell.org/documentation
@@ -26,3 +27,5 @@ Optional:
 
 * FregIDE for eclipse (IntelliJ plugin s*cks)
 * Haskell native on macos: `brew cask install haskell-platform`
+* Maven and Gradle support
+	* Last commit for Gradle plugin 2016 :( https://github.com/Frege/frege-gradle-plugin

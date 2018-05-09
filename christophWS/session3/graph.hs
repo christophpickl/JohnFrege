@@ -1,9 +1,12 @@
 data Graph a = Leaf | Node a (Graph a) (Graph a)
 
---         6
---      4    2
---    3  9  4  1
---  8            5
+--          6
+--        /   \
+--       4     2
+--      / \   /  \
+--     3   9 4    1
+--    /            \
+--   8              5
 
 graph :: Graph Int
 graph = Node 6 nl nr

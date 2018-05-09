@@ -3,11 +3,15 @@ data class Node<T>(
     val left: Node<T>? = null,
     val right: Node<T>? = null
 )
-
-//         6
-//      4    2
-//    3  9  4  1
-//  8            5
+val graphAsString = """
+          6
+        /   \
+       4     2
+      / \   /  \
+     3   9 4    1
+    /            \
+   8              5
+"""
 
 val graph = Node(6,
     left = Node(4,

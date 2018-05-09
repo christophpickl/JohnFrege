@@ -1,36 +1,13 @@
 Session 2 - Basics
 ---
 
-# TODO
-
-## outline for session 2:
+# Outline
 
 * finish my intro (lists) + data types
 * get started: setup fregide ad john
 * go through slides from funkprog
 * prepare some samples to work out with john (implement in kotlin + haskell)
-* => show that i've reported the bug and it got fixed! i'm sooo nice :)
-https://github.com/Frege/eclipse-plugin/issues/32
-
-## ideas
-* workout samples in Kotlin VS Haskell
-	* some basic functionals (map, filter, zip, reduce)
-	* bigger samples like graph algorithms
-* present theory of data structures (node, edge sample), algebraic
-* glossary ausarbeiten (first class, higher order, curry, ...)
-* https://www.youtube.com/watch?v=02_H3LjqMr8
-
-	someFun param
-		| (param >= 5) && (param < 10) = "asdf"
-
-## foobar
-
-* idiomatic programming with lisp
-* ! wikipedia artikel lesen (funkprog allg., haskell)
-* ! slides durchlesen
-* generics
-* "incomplete functions"
-* curry/decurry
+* https://github.com/Frege/eclipse-plugin/issues/32
 
 # Leftovers
 
@@ -198,45 +175,3 @@ main _ = do
 
 as you can see, the third argument of `lazyFun` will only be determined (evaluted) if needed. when the `infiniteFun` is invoked, it will just call itself recursively, and as we all know only chuck norris can make them return a value :) but magically, with haskell we are as powerful as him, so we can make trick the system and simply dont touch that nasty expression.
 
-
-# Setup
-
-## Tools
-
-* Good eclipse plugin, weak intellij plugin
-* Maven and Gradle support
-	* Last commit for Gradle plugin 2016 :( https://github.com/Frege/frege-gradle-plugin
-
-
-* download latest eclipse and configure it properly
-	* increase memory settings in `eclipse.ini`:
-	```
-	-vmargs
-	-Dosgi.requiredJavaVersion=1.8
-	-Xss4m
-	-Xms400m
-	-Xmx2048m
-	```
-	* use UTF-8 encoding
-	* use spaces instead of tabs
-	* add "CMD+R" run shortcut ;)
-* install the eclipse plugin
-	* basically just an update site pointing to:  http://www.frege-lang.org/fregide/
-	* or follow the complete tutorial: https://github.com/Frege/eclipse-plugin
-	* PS: eclipse plugin is far superior than working with intellij
-* create frege project:
-	* hit New / Other
-	* in the dialog select Frege Project
-	* enter some arbitrary name and hit finish
-* create and run file:
-	* create a file `hello.fr` in the `src/` folder
-	```
-	module HelloFrege where
-
-	main _ = do
-    	println "Hello Frege"
-    ```
-    * create a new run configuration:
-    	* select Java Application
-    	* the Main class has to be the same name as the module name defined in the frege file, which is in our case: `HelloFrege`
-    * hit run and you should see the text in the console, bravo!
