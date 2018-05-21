@@ -1,4 +1,4 @@
 module HelloFrege where
 
-main _ = do
-    println "Hello John"
+main = do
+  println "Hello Frege!"

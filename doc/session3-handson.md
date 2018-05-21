@@ -96,8 +96,8 @@ data Container a = Empty | Full a
 
 addIt :: Num a => Container a -> Container a -> Container a
 addIt (Full x) (Full y) = Full (x + y)
-addIt c Empty = c
-addIt Empty c = c
+addIt x Empty = x
+addIt Empty y = y
 
 instance (Show a) => Show (Container a) where
     show (Empty) = "Empty"
@@ -117,31 +117,6 @@ whereas the things contain a defined set of elements and a defined set of operat
 A sample from math would be: `<N; +, -, *, />` (all natural numbers and the four basic arithmic operators)
 
 Oh, and don't forget about "GADs", **G**eneralised **A**lgebraic **D**atatypes, which are... kind a funny too ;) But usually you don't want to restrict your data types that hard and rather do it via polymorphism.
-
-### Fat example
-
-```haskell
-data ClassRoom = ClassRoom {className::String, studentCount::Int}
-data SportsTeam =  SportsTeam {teamName::String, memberCount::Int}
-
-class Validatable a where
-  isValid :: a -> Bool
-
-instance Validatable ClassRoom where
-  isValid v =  studentCount v > 0
-
-instance Validatable SportsTeam where
-  isValid v =  memberCount v > 0 && memberCount v < 10
-
-main :: IO ()
-main = do
-  let class_room = ClassRoom {className="FuncProg", studentCount=2}
-      sports_team = SportsTeam {teamName="Fat Bastards", memberCount=6}
-  putStrLn $ show $ isValid class_room
-  putStrLn $ show $ isValid sports_team
-```
-
-Source: http://devanla.com/polymorphism-in-haskell-1.html
 
 ## Polymorphism
 
@@ -231,16 +206,55 @@ Do it first in
 1. Kotlin, and then in
 2. Haskell (Frege)
 
-## Printing
+# Appendix
 
-Print out the values of graph in...
+## Notes
 
-a) pre-order,
-b) post-order and
-c) in-order.
+Pattern matching with data classes can also be done in Kotlin with sealed classes:
 
-## Proper B-Tree
+```kotlin
+sealed class Shape {
+  class Circle(val r: Float) : Shape()
+  class Rectangle(val w: Float, val h: Float) : Shape()
+}
 
-Your teacher, professor knoop, enters the meeting room and yells at you:
-"Oh my dear student, haven't you learn anything?! I am deeply disappointed with your skills...
-Please reimplement that thing and make it a proper binary tree.", and leaves.
+fun surface(shape: Shape): Float = when(shap) {
+  is Circle -> pi * shape.r
+  is Rectangle -> shape.w * shape.h
+}
+```
+
+In order to print stuff without all those annoying parenthesis, you can use the dollar symbol instead:
+
+```haskell
+putStrLn $ show $ (addIt (Full 22) (Full 20))
+putStrLn (show (addIt (Full 22) (Full 20)))
+```
+
+
+## Fat Sample
+
+Go through this on your own if you are brave enough ;)
+
+```haskell
+data ClassRoom = ClassRoom {className::String, studentCount::Int}
+data SportsTeam =  SportsTeam {teamName::String, memberCount::Int}
+
+class Validatable a where
+  isValid :: a -> Bool
+
+instance Validatable ClassRoom where
+  isValid v =  studentCount v > 0
+
+instance Validatable SportsTeam where
+  isValid v =  memberCount v > 0 && memberCount v < 10
+
+main :: IO ()
+main = do
+  let class_room = ClassRoom {className="FuncProg", studentCount=2}
+      sports_team = SportsTeam {teamName="Fat Bastards", memberCount=6}
+  putStrLn $ show $ isValid class_room
+  putStrLn $ show $ isValid sports_team
+```
+
+Source: http://devanla.com/polymorphism-in-haskell-1.html
