@@ -1,0 +1,43 @@
+module Functionals where
+
+main = do
+  --println $ ("Is even: " ++ (show $ isEven 4))
+  --println $ ("Filtered: " ++ (show $ myFilter isEven [1..5]))
+  --println $ ("Mapped: " ++ (show $ myMap timesTwo [1..5]))
+  --println $ ("Reversed: " ++ (show $ myReverse [1..5]))
+  --println $ ("Zipped: " ++ (show $ myZip [1..5] ['a'..'c']))
+  println $ ("Fold L: " ++ (show $ myFoldl (-) 0 [1..5])) -- (((((0-1)-2)-3)-4)-5) = -15
+  println $ ("Fold R: " ++ (show $ myFoldr (-) 0 [1..5])) -- (0-(1-(2-(3-(4-5))))) = 3
+
+isEven :: Int -> Bool
+isEven x = (x `mod` 2) == 0
+
+myFilter :: (a -> Bool) -> [a] -> [a]
+myFilter _ [] = []
+myFilter f (x:xs) | f x       = x : myFilter f xs
+                  | otherwise = myFilter f xs  
+-- ALTERNATIVE: myFilter f (x:xs) = if f x then x : myFilter f xs else myFilter f xs  
+
+timesTwo :: Int -> Int
+timesTwo x = x * 2
+
+myMap :: (a -> b) -> [a] -> [b]
+myMap _ [] = []
+myMap f (x:xs) = f x : myMap f xs 
+
+myReverse :: [a] -> [a]
+myReverse [] = []
+myReverse x = last x : myReverse (init x)
+--myReverse (x:xs) = (myReverse xs) : [x] -- doesnt work?!
+
+myZip :: [a] -> [b] -> [(a, b)]
+myZip (x:xs) (y:ys) = (x, y) : myZip xs ys
+myZip _ _           = []
+
+myFoldl :: (a -> b -> a) -> a -> [b] -> a
+myFoldl _ i []     = i
+myFoldl f i (x:xs) = myFoldl f (f i x) xs
+
+myFoldr :: (a -> b -> b) -> b -> [a] -> b
+myFoldr _ i []     = i
+myFoldr f i (x:xs) = myFoldr f (f x i) xs

@@ -3,9 +3,8 @@ Notes
 
 ## Todo
 
-* workout samples in Kotlin VS Haskell
-    * some basic functionals (map, filter, zip, reduce)
-* present theory of data structures (node, edge sample), algebraic
+* frege von java aus aufrufen (+ vice versa?)
+* haskell VS frege (especially string handling): https://github.com/Frege/frege/wiki/LYAH-adaptions-for-Frege
 * glossary ausarbeiten (first class, higher order, curry, ...)
 * https://www.youtube.com/watch?v=02_H3LjqMr8
 
