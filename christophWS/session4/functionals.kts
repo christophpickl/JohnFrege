@@ -76,3 +76,11 @@ fun <A, B> myFoldr(f: (A, B) -> B, initial: B, list: List<A>): B {
     return result
 }
 
+// ============================================================================
+
+println("Some fun 2: " + giveMeFun(2)(1))
+println("Some fun 3: " + giveMeFun(3)(1))
+
+fun giveMeFun(x: Int): (Int) -> Int =
+    if (isEven(x)) { y -> x + y}
+    else { y -> x - y }

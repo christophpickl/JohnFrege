@@ -6,8 +6,9 @@ main = do
   --println $ ("Mapped: " ++ (show $ myMap timesTwo [1..5]))
   --println $ ("Reversed: " ++ (show $ myReverse [1..5]))
   --println $ ("Zipped: " ++ (show $ myZip [1..5] ['a'..'c']))
-  println $ ("Fold L: " ++ (show $ myFoldl (-) 0 [1..5])) -- (((((0-1)-2)-3)-4)-5) = -15
-  println $ ("Fold R: " ++ (show $ myFoldr (-) 0 [1..5])) -- (0-(1-(2-(3-(4-5))))) = 3
+  --println $ ("Fold L: " ++ (show $ myFoldl (-) 0 [1..5])) -- (((((0-1)-2)-3)-4)-5) = -15
+  --println $ ("Fold R: " ++ (show $ myFoldr (-) 0 [1..5])) -- (0-(1-(2-(3-(4-5))))) = 3
+  println $ ("Some fun: " ++ (show $ (giveMeFun 3)(1)))
 
 isEven :: Int -> Bool
 isEven x = (x `mod` 2) == 0
@@ -41,3 +42,10 @@ myFoldl f i (x:xs) = myFoldl f (f i x) xs
 myFoldr :: (a -> b -> b) -> b -> [a] -> b
 myFoldr _ i []     = i
 myFoldr f i (x:xs) = myFoldr f (f x i) xs
+
+timesThree :: Int -> Int
+timesThree x = x * 3
+
+giveMeFun :: Int -> (Int -> Int)
+giveMeFun x  | isEven x  = (+) x
+             | otherwise = (-) x
