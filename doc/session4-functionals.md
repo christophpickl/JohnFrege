@@ -40,7 +40,6 @@ view?.let(::applyViewChanges)
 * Do the very same in Kotlin afterwards
 * Implement an HTTP executor with your very own DSL in Kotlin
 
-
 # Functionals
 
 ## Exercises
@@ -53,6 +52,12 @@ Implement the following functionals:
 1. zip (zipWith?)
 1. fold (alias "reduce")
 1. giveMeFun (returning functions)
+
+### Question
+
+Does it make sense to return a partially evaluated function? Like `+(5, 2)` in to return something like `+5(2)` and finally `+7()` which is a constant expression for the number `7`?
+
+At first glance it doesn't, but if you start thinking functional this is a fundamental, necessary concept :clap:
 
 ## Modalities
 
